@@ -118,3 +118,6 @@ export NVM_DIR="/Users/arygalov/.nvm"
 
 #GAM Alias
 alias gam="python ~/gam/gam.py"
+
+#vim Alias
+alias vi="/usr/local/bin/vim"
