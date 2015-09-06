@@ -18,7 +18,8 @@
 	url = https://github.com/rizzatti/dash.vim.git
 [submodule ".vim/bundle/ember.vim"]
 	path = .vim/bundle/ember.vim
-	url = https://github.com/dsawardekar/ember.vim.git
+  url = https://github.com/dsawardekar/ember.vim.git
+  ignore = dirty
 [submodule ".vim/bundle/funcoo.vim"]
 	path = .vim/bundle/funcoo.vim
 	url = https://github.com/rizzatti/funcoo.vim.git
@@ -43,6 +44,7 @@
 [submodule ".vim/bundle/vim-clojure-static"]
 	path = .vim/bundle/vim-clojure-static
 	url = https://github.com/guns/vim-clojure-static.git
+  ignore = dirty
 [submodule ".vim/bundle/vim-commentary"]
 	path = .vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
@@ -73,6 +75,7 @@
 [submodule ".vim/bundle/xterm-color-table.vim"]
 	path = .vim/bundle/xterm-color-table.vim
 	url = https://github.com/chrishunt/xterm-color-table.vim.git
+  ignore = dirty
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = https://github.com/alexrygalov/oh-my-zsh.git
