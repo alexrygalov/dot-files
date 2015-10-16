@@ -122,3 +122,6 @@ alias gam="python ~/gam/gam.py"
 #vim Alias
 alias vi="/usr/local/bin/vim"
 export PATH="/usr/local/sbin:$PATH"
+
+
+export PATH="/usr/local/bin:$PATH"
