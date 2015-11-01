@@ -125,3 +125,8 @@ export PATH="/usr/local/sbin:$PATH"
 
 
 export PATH="/usr/local/bin:$PATH"
+
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://10.211.55.19:2376"
+export DOCKER_CERT_PATH="/Users/arygalov/.docker/machine/machines/docker-host"
+export DOCKER_MACHINE_NAME="docker-host"
