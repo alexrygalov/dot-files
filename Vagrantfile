@@ -82,4 +82,23 @@ Vagrant.configure(2) do |config|
      # v.gui = true
      end
 
+   # Begin osx-sandbox
+     config.vm.define "centos7" do |centos7|
+     centos7.vm.hostname = "centos7"
+     centos7.vm.box = "parallels/centos-7.1"
+     #srv01.vm.synced_folder "code/", "/srv/www", create: true #, disabled: true
+     centos7.vm.network "forwarded_port", guest: 80, host: 8080
+     #srv01.puppet_install.puppet_version = :latest
+     #srv01.vm.provision "puppet" do |puppet|
+     #  puppet.manifests_path = "manifests"
+     #  puppet.manifest_file = "default.pp"
+     #config.vm.provision "shell", path: "provision.sh"
+     # config.vm.provision "chef_solo" do |chef|
+     #chef.add_recipe "vagrant_la"
+     #config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+     #config.vm.network "public_network", :bridge => 'en0: Wi-Fi'
+     # Don't boot with headless mode
+     # v.gui = true
+     end
+
 end
