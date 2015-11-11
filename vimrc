@@ -215,3 +215,5 @@ set  autoread
 let g:pad#dir = "~/notes"
 
 set clipboard=unnamed
+
+filetype plugin on
