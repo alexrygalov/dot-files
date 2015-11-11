@@ -91,3 +91,4 @@
 [submodule ".vim/bundle/bash-support.vim"]
 	path = .vim/bundle/bash-support.vim
 	url = https://github.com/vim-scripts/bash-support.vim.git
+  ignore = dirty
