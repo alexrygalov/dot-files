@@ -18,7 +18,7 @@ tab-reset() {
 color-ssh() {
     if [[ -n "$ITERM_SESSION_ID" ]]; then
         trap "tab-reset" INT EXIT
-        if [[ "$*" =~ "production|ec2-.*compute-1" ]]; then
+        if [[ "$*" =~ "production|ec2-.*compute-1|mon|kry" ]]; then
             tab-color 255 0 0
         else
             tab-color 0 255 0
