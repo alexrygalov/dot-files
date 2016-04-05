@@ -103,6 +103,7 @@ alias gam="python ~/gam/gam.py"
 #vim Alias
 alias vi="/usr/local/bin/vim"
 
+export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export DOCKER_TLS_VERIFY="1"
 export DOCKER_HOST="tcp://10.211.55.19:2376"
