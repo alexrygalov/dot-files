@@ -1,0 +1,8 @@
+.DS_Store
+.Trash
+.bash_history
+.bash_profile
+.config
+.ssh/
+.vim/.netrwhist
+
