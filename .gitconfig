@@ -1,0 +1,9 @@
+[user]
+	name = Alex Rygalov
+	email = alexander.rygalov@gmail.com
+
+[alias]
+  co = checkout
+  ci = commit -v
+  st = status
+  br = branch
