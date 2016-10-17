@@ -5,100 +5,75 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
-Vagrant.configure(2) do |config|
-  config.vm.box = "parallels/ubuntu-14.04"
+Vagrant.configure("2") do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
 
-  # Begin srv03
-     config.vm.define "srv01" do |srv01|
-     srv01.vm.hostname = "srv01"
-     srv01.vm.box = "parallels/ubuntu-14.04"
-     srv01.vm.synced_folder "code/", "/srv/www", create: true #, disabled: true
-     #srv01.vm.network "forwarded_port", guest: 80, host: 8080
-     #srv01.puppet_install.puppet_version = :latest
-     #srv01.vm.provision "puppet" do |puppet|
-     #  puppet.manifests_path = "manifests"
-     #  puppet.manifest_file = "default.pp"
-     #config.vm.provision "shell", path: "provision.sh"
-     # config.vm.provision "chef_solo" do |chef|
-     #chef.add_recipe "vagrant_la"
-     #config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-     #config.vm.network "public_network", :bridge => 'en0: Wi-Fi'
-     # Don't boot with headless mode
-     # v.gui = true
-     end
-  # Begin srv02
-     config.vm.define "srv02" do |srv02|
-     srv02.vm.hostname = "srv02"
-     srv02.vm.box = "parallels/ubuntu-14.04"
-     #srv01.vm.synced_folder "code/", "/srv/www", create: true #, disabled: true
-     srv02.vm.network "forwarded_port", guest: 80, host: 8080
-     #srv01.puppet_install.puppet_version = :latest
-     #srv01.vm.provision "puppet" do |puppet|
-     #  puppet.manifests_path = "manifests"
-     #  puppet.manifest_file = "default.pp"
-     #config.vm.provision "shell", path: "provision.sh"
-     # config.vm.provision "chef_solo" do |chef|
-     #chef.add_recipe "vagrant_la"
-     #config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-     #config.vm.network "public_network", :bridge => 'en0: Wi-Fi'
-     # Don't boot with headless mode
-     # v.gui = true
-     end
-   # Begin srv03
-     config.vm.define "srv03" do |srv03|
-     srv03.vm.hostname = "srv03"
-     srv03.vm.box = "t03"
-     #srv01.vm.synced_folder "code/", "/srv/www", create: true #, disabled: true
-     srv03.vm.network "forwarded_port", guest: 80, host: 8080
-     #srv01.puppet_install.puppet_version = :latest
-     #srv01.vm.provision "puppet" do |puppet|
-     #  puppet.manifests_path = "manifests"
-     #  puppet.manifest_file = "default.pp"
-     #config.vm.provision "shell", path: "provision.sh"
-     # config.vm.provision "chef_solo" do |chef|
-     #chef.add_recipe "vagrant_la"
-     #config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-     #config.vm.network "public_network", :bridge => 'en0: Wi-Fi'
-     # Don't boot with headless mode
-     # v.gui = true
-     end
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://atlas.hashicorp.com/search.
+  config.vm.box = "bento/ubuntu-14.04"
 
-   # Begin osx-sandbox
-     config.vm.define "osxbox" do |osxbox|
-     osxbox.vm.hostname = "osxbox"
-     osxbox.vm.box = "parallels-osx-10.10"
-     #srv01.vm.synced_folder "code/", "/srv/www", create: true #, disabled: true
-     osxbox.vm.network "forwarded_port", guest: 80, host: 8080
-     #srv01.puppet_install.puppet_version = :latest
-     #srv01.vm.provision "puppet" do |puppet|
-     #  puppet.manifests_path = "manifests"
-     #  puppet.manifest_file = "default.pp"
-     #config.vm.provision "shell", path: "provision.sh"
-     # config.vm.provision "chef_solo" do |chef|
-     #chef.add_recipe "vagrant_la"
-     #config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-     #config.vm.network "public_network", :bridge => 'en0: Wi-Fi'
-     # Don't boot with headless mode
-     # v.gui = true
-     end
+  # The url from where the 'config.vm.box' box will be fetched if it
+  # doesn't already exist on the user's system.
+  config.vm.box_url = "bento/ubuntu-14.04"
 
-   # Begin osx-sandbox
-     config.vm.define "centos7" do |centos7|
-     centos7.vm.hostname = "centos7"
-     centos7.vm.box = "parallels/centos-7.1"
-     #srv01.vm.synced_folder "code/", "/srv/www", create: true #, disabled: true
-     centos7.vm.network "forwarded_port", guest: 80, host: 8080
-     #srv01.puppet_install.puppet_version = :latest
-     #srv01.vm.provision "puppet" do |puppet|
-     #  puppet.manifests_path = "manifests"
-     #  puppet.manifest_file = "default.pp"
-     #config.vm.provision "shell", path: "provision.sh"
-     # config.vm.provision "chef_solo" do |chef|
-     #chef.add_recipe "vagrant_la"
-     #config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-     #config.vm.network "public_network", :bridge => 'en0: Wi-Fi'
-     # Don't boot with headless mode
-     # v.gui = true
-     end
 
+   config.vm.define "srv01", primary: true do |srv01|
+    srv01.vm.hostname = "srv01.example.com"
+  end
+
+   config.vm.define "srv02", primary: true do |srv02|
+    srv02.vm.hostname = "srv02.example.com"
+  end
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  # Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+  # config.vm.network "private_network", ip: "192.168.33.10"
+
+  # Create a public network, which generally matched to bridged network.
+  # Bridged networks make the machine appear as another physical device on
+  # your network.
+  # config.vm.network "public_network"
+
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  # Provider-specific configuration so you can fine-tune various
+  # backing providers for Vagrant. These expose provider-specific options.
+  # Example for VirtualBox:
+  #
+  # config.vm.provider "virtualbox" do |vb|
+  #   # Display the VirtualBox GUI when booting the machine
+  #   vb.gui = true
+  #
+  #   # Customize the amount of memory on the VM:
+  #   vb.memory = "1024"
+  # end
+  #
+  # View the documentation for the provider you are using for more
+  # information on available options.
+
+  # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
+  # such as FTP and Heroku are also available. See the documentation at
+  # https://docs.vagrantup.com/v2/push/atlas.html for more information.
+  # config.push.define "atlas" do |push|
+  #   push.app = "YOUR_ATLAS_USERNAME/YOUR_APPLICATION_NAME"
+  # end
+
+  # Enable provisioning with a shell script. Additional provisioners such as
+  # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
+  # documentation for more information about their specific syntax and use.
+  # config.vm.provision "shell", inline: <<-SHELL
+  #   apt-get update
+  #   apt-get install -y apache2
+  # SHELL
 end
