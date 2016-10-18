@@ -103,5 +103,7 @@ alias gam="python ~/gam/gam.py"
 #vim Alias
 alias vi="/usr/local/bin/vim"
 
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/opt/puppetlabs/bin/:/usr/local/sbin:$PATH"
+
+# Fix ssh agent for macOS 10.12
+ssh-add -A &> /dev/null
