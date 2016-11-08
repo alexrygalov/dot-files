@@ -1,87 +1,84 @@
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/bundle/puppet-syntax-vim"]
-	path = .vim/bundle/puppet-syntax-vim
-	url = https://github.com/puppetlabs/puppet-syntax-vim.git
-[submodule ".vim/bundle/ag.vim"]
-	path = .vim/bundle/ag.vim
+[submodule ".vim/pack/alex/start/ag.vim"]
+	path = .vim/pack/alex/start/ag.vim
 	url = https://github.com/epmatsw/ag.vim.git
-[submodule ".vim/bundle/base16-vim"]
-	path = .vim/bundle/base16-vim
+[submodule ".vim/pack/alex/start/base16-vim"]
+	path = .vim/pack/alex/start/base16-vim
 	url = https://github.com/chriskempson/base16-vim.git
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule ".vim/bundle/dash.vim"]
-	path = .vim/bundle/dash.vim
-	url = https://github.com/rizzatti/dash.vim.git
-[submodule ".vim/bundle/ember.vim"]
-	path = .vim/bundle/ember.vim
-  url = https://github.com/dsawardekar/ember.vim.git
-  ignore = dirty
-[submodule ".vim/bundle/funcoo.vim"]
-	path = .vim/bundle/funcoo.vim
-	url = https://github.com/rizzatti/funcoo.vim.git
-[submodule ".vim/bundle/gist-vim"]
-	path = .vim/bundle/gist-vim
-	url = https://github.com/mattn/gist-vim.git
-[submodule ".vim/bundle/html5-syntax.vim"]
-	path = .vim/bundle/html5-syntax.vim
-	url = https://github.com/othree/html5-syntax.vim.git
-[submodule ".vim/bundle/tabular"]
-	path = .vim/bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
-[submodule ".vim/bundle/unite.vim"]
-	path = .vim/bundle/unite.vim
-	url = https://github.com/Shougo/unite.vim.git
-[submodule ".vim/bundle/vim-abolish"]
-	path = .vim/bundle/vim-abolish
-	url = https://github.com/tpope/vim-abolish.git
-[submodule ".vim/bundle/vim-commentary"]
-	path = .vim/bundle/vim-commentary
-	url = https://github.com/tpope/vim-commentary.git
-[submodule ".vim/bundle/vim-endwise"]
-	path = .vim/bundle/vim-endwise
-	url = https://github.com/tpope/vim-endwise.git
-[submodule ".vim/bundle/vim-javascript-syntax"]
-	path = .vim/bundle/vim-javascript-syntax
-	url = https://github.com/jelera/vim-javascript-syntax.git
-[submodule ".vim/bundle/vim-markdown"]
-	path = .vim/bundle/vim-markdown
-	url = https://github.com/tpope/vim-markdown.git
-[submodule ".vim/bundle/vim-rails"]
-	path = .vim/bundle/vim-rails
-	url = https://github.com/tpope/vim-rails.git
-[submodule ".vim/bundle/vim-rbenv"]
-	path = .vim/bundle/vim-rbenv
-	url = https://github.com/tpope/vim-rbenv.git
-[submodule ".vim/bundle/vim-repeat"]
-	path = .vim/bundle/vim-repeat
-	url = https://github.com/tpope/vim-repeat.git
-[submodule ".vim/bundle/vim-ruby"]
-	path = .vim/bundle/vim-ruby
-	url = https://github.com/vim-ruby/vim-ruby.git
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/xterm-color-table.vim"]
-	path = .vim/bundle/xterm-color-table.vim
-	url = https://github.com/chrishunt/xterm-color-table.vim.git
-  ignore = dirty
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/vim-puppet"]
-	path = .vim/bundle/vim-puppet
-	url = git://github.com/rodjek/vim-puppet.git
-[submodule ".vim/bundle/limelight.vim"]
-	path = .vim/bundle/limelight.vim
-	url = https://github.com/junegunn/limelight.vim
-[submodule ".vim/bundle/bash-support.vim"]
-	path = .vim/bundle/bash-support.vim
+[submodule ".vim/pack/alex/start/bash-support.vim"]
+	path = .vim/pack/alex/start/bash-support.vim
 	url = https://github.com/vim-scripts/bash-support.vim.git
-  ignore = dirty
-[submodule ".vim/bundle/vim-go"]
-	path = .vim/bundle/vim-go
+[submodule ".vim/pack/alex/start/ctrlp.vim"]
+	path = .vim/pack/alex/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule ".vim/pack/alex/start/dash.vim"]
+	path = .vim/pack/alex/start/dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
+[submodule ".vim/pack/alex/start/ember.vim"]
+	path = .vim/pack/alex/start/ember.vim
+	url = https://github.com/dsawardekar/ember.vim.git
+[submodule ".vim/pack/alex/start/funcoo.vim"]
+	path = .vim/pack/alex/start/funcoo.vim
+	url = https://github.com/rizzatti/funcoo.vim.git
+[submodule ".vim/pack/alex/start/gist-vim"]
+	path = .vim/pack/alex/start/gist-vim
+	url = https://github.com/mattn/gist-vim.git
+[submodule ".vim/pack/alex/start/html5-syntax.vim"]
+	path = .vim/pack/alex/start/html5-syntax.vim
+	url = https://github.com/othree/html5-syntax.vim.git
+[submodule ".vim/pack/alex/start/limelight.vim"]
+	path = .vim/pack/alex/start/limelight.vim
+	url = https://github.com/junegunn/limelight.vim
+[submodule ".vim/pack/alex/start/nerdtree"]
+	path = .vim/pack/alex/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/pack/alex/start/puppet-syntax-vim"]
+	path = .vim/pack/alex/start/puppet-syntax-vim
+	url = https://github.com/puppetlabs/puppet-syntax-vim.git
+[submodule ".vim/pack/alex/start/tabular"]
+	path = .vim/pack/alex/start/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule ".vim/pack/alex/start/unite.vim"]
+	path = .vim/pack/alex/start/unite.vim
+	url = https://github.com/Shougo/unite.vim.git
+[submodule ".vim/pack/alex/start/vim-abolish"]
+	path = .vim/pack/alex/start/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
+[submodule ".vim/pack/alex/start/vim-commentary"]
+	path = .vim/pack/alex/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule ".vim/pack/alex/start/vim-endwise"]
+	path = .vim/pack/alex/start/vim-endwise
+	url = https://github.com/tpope/vim-endwise.git
+[submodule ".vim/pack/alex/start/vim-fugitive"]
+	path = .vim/pack/alex/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vim/pack/alex/start/vim-go"]
+	path = .vim/pack/alex/start/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/pack/alex/start/vim-javascript-syntax"]
+	path = .vim/pack/alex/start/vim-javascript-syntax
+	url = https://github.com/jelera/vim-javascript-syntax.git
+[submodule ".vim/pack/alex/start/vim-markdown"]
+	path = .vim/pack/alex/start/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule ".vim/pack/alex/start/vim-puppet"]
+	path = .vim/pack/alex/start/vim-puppet
+	url = git://github.com/rodjek/vim-puppet.git
+[submodule ".vim/pack/alex/start/vim-rails"]
+	path = .vim/pack/alex/start/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule ".vim/pack/alex/start/vim-rbenv"]
+	path = .vim/pack/alex/start/vim-rbenv
+	url = https://github.com/tpope/vim-rbenv.git
+[submodule ".vim/pack/alex/start/vim-repeat"]
+	path = .vim/pack/alex/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule ".vim/pack/alex/start/vim-ruby"]
+	path = .vim/pack/alex/start/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule ".vim/pack/alex/start/vim-surround"]
+	path = .vim/pack/alex/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/pack/alex/start/xterm-color-table.vim"]
+	path = .vim/pack/alex/start/xterm-color-table.vim
+	url = https://github.com/chrishunt/xterm-color-table.vim.git
