@@ -82,7 +82,7 @@ imap <F1> <C-o>:echo<CR>
 vnoremap . :norm.<cr>
 
 " map markdown preview
-map <leader>m :!open -a Marked %<cr><cr>
+map <leader>m :!open -a "MacDown" %<cr><cr>
 
 " map git commands
 map <leader>b :Gblame<cr>
