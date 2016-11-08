@@ -1,8 +1,8 @@
 " .vimrc
 
 " load up pathogen and all bundles
-call pathogen#infect()
-call pathogen#helptags()
+" call pathogen#infect()
+" call pathogen#helptags()
 
 set bs=2
 syntax on                         " show syntax highlighting
