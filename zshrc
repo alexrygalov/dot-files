@@ -24,7 +24,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(git rbenv)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.iterm.zsh
+# source ~/.iterm.zsh
 
 # Disable auto-correct
 unsetopt correct_all
@@ -50,9 +50,7 @@ uptime
 
 # Add RVM to PATH for scripting
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-#export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+PATH=$PATH:$HOME/.rvm/bin
 
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 
@@ -92,16 +90,19 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 
-#NVM
+# NVM
 export NVM_DIR="/Users/arygalov/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-#GAM Alias
+# GAM Alias
 alias gam="python ~/gam/gam.py"
 
-#vim Alias
+# vim Alias
 alias vi="/usr/local/bin/vim"
+
+# Homebrew update alias
+alias brewup="brew update && brew upgrade && brew cleanup"
 
 export PATH="/usr/local/bin:/opt/puppetlabs/bin/:/usr/local/sbin:$PATH"
 

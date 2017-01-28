@@ -216,4 +216,5 @@ let g:pad#dir = "~/notes"
 
 set clipboard=unnamed
 
+noremap <F5> <ESC>:w<CR>:silent execute "!python %"<CR><CR>
 filetype plugin on
