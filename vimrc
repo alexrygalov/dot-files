@@ -1,12 +1,8 @@
 " .vimrc
 
-" load up pathogen and all bundles
-" call pathogen#infect()
-" call pathogen#helptags()
-
+set nocompatible
 set bs=2
 syntax on                         " show syntax highlighting
-filetype plugin indent on
 set autoindent                    " set auto indent
 set ts=2                          " set indent to 2 spaces
 set shiftwidth=2
@@ -65,6 +61,8 @@ endif
 " set leader key to comma
 let mapleader = ","
 
+let &runtimepath.=',~/vim/pack/alex/start/ale'
+
 " ctrlp config
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_max_height = 30
@@ -106,6 +104,7 @@ map <leader>A :Ag! "<C-r>=expand('<cword>')<CR>"
 " clear the command line and search highlighting
 noremap <C-l> :nohlsearch<CR>
 imap <S-CR> <CR><CR>end<Esc>-cc
+
 " toggle spell check with <F5>
 map <F5> :setlocal spell! spelllang=en_us<cr>
 imap <F5> <ESC>:setlocal spell! spelllang=en_us<cr>
@@ -149,70 +148,16 @@ function! RenameFile()
 endfunction
 map <leader>n :call RenameFile()<cr>
 
-" run specs with ',t' via Gary Bernhardt
-function! RunTests(filename)
-  " Write the file and run tests for the given filename
-  :w
-  :silent !clear
-  if match(a:filename, '\.feature$') != -1
-    exec ":!script/features " . a:filename
-  elseif match(a:filename, '_test\.rb$') != -1
-    exec ":!ruby -Itest " . a:filename
-  else
-    if filereadable("script/test")
-      exec ":!script/test " . a:filename
-    elseif filereadable("Gemfile")
-      exec ":!bundle exec rspec --color " . a:filename
-    else
-      exec ":!rspec --color " . a:filename
-    end
-  end
-endfunction
-
-function! SetTestFile()
-  " set the spec file that tests will be run for.
-  let t:grb_test_file=@%
-endfunction
-
-function! RunTestFile(...)
-  if a:0
-    let command_suffix = a:1
-  else
-    let command_suffix = ""
-  endif
-
-  " run the tests for the previously-marked file.
-  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
-  if in_test_file
-    call SetTestFile()
-  elseif !exists("t:grb_test_file")
-    return
-  end
-  call RunTests(t:grb_test_file . command_suffix)
-endfunction
-
-function! RunNearestTest()
-  let spec_line_number = line('.')
-  call RunTestFile(":" . spec_line_number . " -b")
-endfunction
-
-" run test runner
-map <leader>t :call RunTestFile()<cr>
-map <leader>T :call RunNearestTest()<cr>
-"autocmd vimenter * if !argc() | NERDTree | endif"
-
 " map NERDtree
 map <leader>n :NERDTreeToggle<CR>
 
-" Auto save files when focus is lost
+" auto save files when focus is lost
 :au FocusLost * :w
 
 scriptencoding utf-8
 set encoding=utf-8
 
 set  autoread
-
-let g:pad#dir = "~/notes"
 
 set clipboard=unnamed
 

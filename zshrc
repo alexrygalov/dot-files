@@ -108,3 +108,4 @@ export PATH="/usr/local/bin:/opt/puppetlabs/bin/:/usr/local/sbin:$PATH"
 
 # Fix ssh agent for macOS 10.12
 ssh-add -A 2>/dev/null;
+export PATH="/usr/local/opt/sqlite/bin:$PATH"

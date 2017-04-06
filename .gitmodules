@@ -82,3 +82,9 @@
 [submodule ".vim/pack/alex/start/xterm-color-table.vim"]
 	path = .vim/pack/alex/start/xterm-color-table.vim
 	url = https://github.com/chrishunt/xterm-color-table.vim.git
+[submodule ".vim/pack/alex/start/ale"]
+	path = .vim/pack/alex/start/ale
+	url = https://github.com/w0rp/ale.git
+[submodule ".vim/pack/alex/start/dracula-theme"]
+	path = .vim/pack/alex/start/dracula-theme
+	url = git@github.com:dracula/vim.git
