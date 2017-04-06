@@ -13,9 +13,6 @@
 [submodule ".vim/pack/alex/start/dash.vim"]
 	path = .vim/pack/alex/start/dash.vim
 	url = https://github.com/rizzatti/dash.vim.git
-[submodule ".vim/pack/alex/start/ember.vim"]
-	path = .vim/pack/alex/start/ember.vim
-	url = https://github.com/dsawardekar/ember.vim.git
 [submodule ".vim/pack/alex/start/funcoo.vim"]
 	path = .vim/pack/alex/start/funcoo.vim
 	url = https://github.com/rizzatti/funcoo.vim.git
@@ -31,15 +28,9 @@
 [submodule ".vim/pack/alex/start/nerdtree"]
 	path = .vim/pack/alex/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/pack/alex/start/puppet-syntax-vim"]
-	path = .vim/pack/alex/start/puppet-syntax-vim
-	url = https://github.com/puppetlabs/puppet-syntax-vim.git
 [submodule ".vim/pack/alex/start/tabular"]
 	path = .vim/pack/alex/start/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule ".vim/pack/alex/start/unite.vim"]
-	path = .vim/pack/alex/start/unite.vim
-	url = https://github.com/Shougo/unite.vim.git
 [submodule ".vim/pack/alex/start/vim-abolish"]
 	path = .vim/pack/alex/start/vim-abolish
 	url = https://github.com/tpope/vim-abolish.git
@@ -52,18 +43,12 @@
 [submodule ".vim/pack/alex/start/vim-fugitive"]
 	path = .vim/pack/alex/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/pack/alex/start/vim-go"]
-	path = .vim/pack/alex/start/vim-go
-	url = https://github.com/fatih/vim-go.git
 [submodule ".vim/pack/alex/start/vim-javascript-syntax"]
 	path = .vim/pack/alex/start/vim-javascript-syntax
 	url = https://github.com/jelera/vim-javascript-syntax.git
 [submodule ".vim/pack/alex/start/vim-markdown"]
 	path = .vim/pack/alex/start/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
-[submodule ".vim/pack/alex/start/vim-puppet"]
-	path = .vim/pack/alex/start/vim-puppet
-	url = git://github.com/rodjek/vim-puppet.git
 [submodule ".vim/pack/alex/start/vim-rails"]
 	path = .vim/pack/alex/start/vim-rails
 	url = https://github.com/tpope/vim-rails.git
@@ -79,9 +64,6 @@
 [submodule ".vim/pack/alex/start/vim-surround"]
 	path = .vim/pack/alex/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/pack/alex/start/xterm-color-table.vim"]
-	path = .vim/pack/alex/start/xterm-color-table.vim
-	url = https://github.com/chrishunt/xterm-color-table.vim.git
 [submodule ".vim/pack/alex/start/ale"]
 	path = .vim/pack/alex/start/ale
 	url = https://github.com/w0rp/ale.git
