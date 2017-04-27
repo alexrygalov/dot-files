@@ -34,3 +34,6 @@
 [submodule ".vim/pack/alex/start/vim-go"]
 	path = .vim/pack/alex/start/vim-go
 	url = https://github.com/fatih/vim-go
+[submodule ".vim/pack/alex/start/auto-pairs"]
+	path = .vim/pack/alex/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
