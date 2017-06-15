@@ -11,7 +11,7 @@ Plug 'mattn/gist-vim',
 Plug 'scrooloose/nerdtree',
 Plug 'tpope/vim-fugitive',
 Plug 'plasticboy/vim-markdown',
-
+Plug 'pearofducks/ansible-vim'
 Plug 'rodjek/vim-puppet',
 Plug 'vim-ruby/vim-ruby',
 Plug 'tpope/vim-surround',
