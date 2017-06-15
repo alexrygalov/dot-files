@@ -5,4 +5,4 @@
 .config
 .ssh/
 .vim/.netrwhist
-.vim/plugged/*
+.vim/plugged/
