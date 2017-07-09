@@ -54,6 +54,8 @@ set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
 " set dark background and color scheme
 set background=dark
 colorscheme base16-railscasts
+set t_Co=256  " vim-monokai now only support 256 colours in terminal.
+
 " set term=xterm-256colors
 " set up some custom colors
 highlight clear SignColumn
@@ -183,3 +185,9 @@ set clipboard=unnamed
 
 noremap <F5> <ESC>:w<CR>:silent execute "!python %"<CR><CR>
 filetype plugin on
+
+" ansible syntax 
+let g:ansible_attribute_highlight = "ob"
+let g:ansible_name_highlight = 'b'
+let g:ansible_extra_keywords_highlight = 1
+
