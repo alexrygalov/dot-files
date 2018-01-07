@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go',
 Plug 'mileszs/ack.vim',
 Plug 'w0rp/ale',
+Plug 'rakr/vim-one',
 Plug 'jiangmiao/auto-pairs', 
 Plug 'chriskempson/base16-vim',
 Plug 'kien/ctrlp.vim',
@@ -15,7 +16,8 @@ Plug 'pearofducks/ansible-vim'
 Plug 'rodjek/vim-puppet',
 Plug 'vim-ruby/vim-ruby',
 Plug 'tpope/vim-surround',
-
+Plug 'vadv/vim-chef',
+Plug 'crusoexia/vim-monokai'
 call plug#end()
 
 " .vimrc
@@ -54,7 +56,9 @@ set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
 " set dark background and color scheme
 set background=dark
 colorscheme base16-railscasts
-set t_Co=256  " vim-monokai now only support 256 colours in terminal.
+set t_8b=^[[48;2;%lu;%lu;%lum
+set t_8f=^[[38;2;%lu;%lu;%lum
+" set t_Co=256  " vim-monokai now only support 256 colours in terminal.
 
 " set term=xterm-256colors
 " set up some custom colors
@@ -190,4 +194,7 @@ filetype plugin on
 let g:ansible_attribute_highlight = "ob"
 let g:ansible_name_highlight = 'b'
 let g:ansible_extra_keywords_highlight = 1
+
+" chef syntax 
+autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
 

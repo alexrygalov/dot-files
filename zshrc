@@ -96,10 +96,13 @@ export NVM_DIR="/Users/arygalov/.nvm"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # GAM Alias
-alias gam="python ~/gam/gam.py"
-
+alias gam="/Users/alexrygalov/bin/gam/gam"
 # vim Alias
 alias vi="/usr/local/bin/vim"
+# Docker aliases
+alias doeckr="docker"
+alias docekr="docker"
+alias dockr="docker"
 
 # Homebrew update alias
 alias brewup="brew update && brew upgrade && brew cleanup"
@@ -110,3 +113,7 @@ export PATH="/usr/local/bin:/opt/puppetlabs/bin/:/usr/local/sbin:$PATH"
 ssh-add -A 2>/dev/null;
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
