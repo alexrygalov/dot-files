@@ -46,7 +46,7 @@ uptime
 
 # Random quote from fucking-greate-advice
  /usr/bin/printf "$(echo -e `curl -s http://fucking-great-advice.ru/api/random | 
- awk -F \" '{print $8}'` | sed 's/\&nbsp;/ /g')"\\n
+ awk -F \" '{print $6}'` | sed 's/\&nbsp;/ /g')"\\n
 
 # Add RVM to PATH for scripting
 
