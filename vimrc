@@ -18,6 +18,7 @@ Plug 'vim-ruby/vim-ruby',
 Plug 'tpope/vim-surround',
 Plug 'vadv/vim-chef',
 Plug 'crusoexia/vim-monokai'
+Plug 'phanviet/vim-monokai-pro'
 call plug#end()
 
 " .vimrc
@@ -55,7 +56,7 @@ set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
 
 " set dark background and color scheme
 set background=dark
-colorscheme base16-railscasts
+colorscheme monokai 
 set t_8b=^[[48;2;%lu;%lu;%lum
 set t_8f=^[[38;2;%lu;%lu;%lum
 " set t_Co=256  " vim-monokai now only support 256 colours in terminal.

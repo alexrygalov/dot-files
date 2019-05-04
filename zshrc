@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="alex"
+ZSH_THEME="robbyrussell"
 
 # Disable weekly update checks
 #DISABLE_AUTO_UPDATE="true"
@@ -52,7 +52,7 @@ uptime
 
 PATH=$PATH:$HOME/.rvm/bin
 
-export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
 # Uncomment to change how often before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
@@ -109,6 +109,13 @@ alias brewup="brew update && brew upgrade && brew cleanup"
 
 export PATH="/usr/local/bin:/opt/puppetlabs/bin/:/usr/local/sbin:$PATH"
 
+# gma project aliases
+
+alias bsfgam="/Users/ar/bin/gam/gam"
+alias seagam="/Users/ar/gaM/SEA/sea.gam/gam"
+alias eumegam="/Users/ar/gaM/EUME/eume.gam/gam"
+alias amsgam="/Users/ar/gaM/AMS/ams.gam/gam"
+
 # Fix ssh agent for macOS 10.12
 # ssh-add -A 2>/dev/null;
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
@@ -117,3 +124,10 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
+export ANSIBLE_NOCOWS=1
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ar/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ar/google-cloud-sdk/completion.zsh.inc'; fi
