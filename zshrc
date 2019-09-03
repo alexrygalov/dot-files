@@ -84,7 +84,7 @@ SAVEHIST=5000000
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git docker kubectl)
 
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -109,13 +109,17 @@ alias brewup="brew update && brew upgrade && brew cleanup"
 
 export PATH="/usr/local/bin:/opt/puppetlabs/bin/:/usr/local/sbin:$PATH"
 
+
+alias wttr="curl wttr.in"
 # gma project aliases
 
-alias bsfgam="/Users/ar/bin/gam/gam"
-alias seagam="/Users/ar/gaM/SEA/sea.gam/gam"
-alias eumegam="/Users/ar/gaM/EUME/eume.gam/gam"
-alias amsgam="/Users/ar/gaM/AMS/ams.gam/gam"
+alias bsfgam="/Users/ar/GAM/bsf_gam/gam"
+alias seagam="/Users/ar/GAM/sea_gam/gam"
+alias eumegam="/Users/ar/GAM/eume_gam/gam"
+alias amsgam="/Users/ar/GAM/ams_gam/gam"
 
+# fun weather alias:
+alias weather="curl http://wttr.in" 
 # Fix ssh agent for macOS 10.12
 # ssh-add -A 2>/dev/null;
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
@@ -125,6 +129,13 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 export ANSIBLE_NOCOWS=1
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export GOPATH=$HOME/go
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ar/google-cloud-sdk/path.zsh.inc'; fi
