@@ -47,6 +47,7 @@ set laststatus=2                  " always show status bar
 set nofoldenable                  " disable code folding
 set clipboard=unnamed             " use the system clipboard
 set wildmenu                      " enable bash style tab completion
+set backspace=indent,eol,start
 set wildmode=list:longest,full
 runtime macros/matchit.vim        " use % to jump between start/end of methods
 set guifont=Menlo:h14 " set gui font
@@ -55,8 +56,8 @@ set guifont=Menlo:h14 " set gui font
 set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
 
 " set dark background and color scheme
-set background=dark
-colorscheme monokai 
+" set background=dark
+ colorscheme monokai 
 set t_8b=^[[48;2;%lu;%lu;%lum
 set t_8f=^[[38;2;%lu;%lu;%lum
 " set t_Co=256  " vim-monokai now only support 256 colours in terminal.
@@ -195,7 +196,11 @@ filetype plugin on
 let g:ansible_attribute_highlight = "ob"
 let g:ansible_name_highlight = 'b'
 let g:ansible_extra_keywords_highlight = 1
+autocmd FileType yaml setlocal ai ts=2 sw=2 et
 
 " chef syntax 
 autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
 
+if has("autocmd")
+  autocmd FileType go set ts=2 sw=2 sts=2 noet nolist autowrite
+endif
