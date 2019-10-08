@@ -8,3 +8,4 @@
 .ssh/
 .vim/.netrwhist
 .vim/plugged/
+*.swp
