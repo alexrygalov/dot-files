@@ -1,4 +1,6 @@
 .DS_Store
+.vim/autoload/plug.vim.old
+.swp
 .Trash
 .bash_history
 .bash_profile

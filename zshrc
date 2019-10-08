@@ -21,10 +21,13 @@ DISABLE_AUTO_TITLE="true"
 #
 # Example format:
 #   plugins=(rails git textmate ruby)
-plugins=(git rbenv)
+plugins=(git rbenv docker)
 
 source $ZSH/oh-my-zsh.sh
 # source ~/.iterm.zsh
+
+# Add some gam aliases
+source ~/.gam_aliases
 
 # Disable auto-correct
 unsetopt correct_all
@@ -47,10 +50,6 @@ uptime
 # Random quote from fucking-greate-advice
  /usr/bin/printf "$(echo -e `curl -s http://fucking-great-advice.ru/api/random | 
  awk -F \" '{print $6}'` | sed 's/\&nbsp;/ /g')"\\n
-
-# Add RVM to PATH for scripting
-
-PATH=$PATH:$HOME/.rvm/bin
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
@@ -98,7 +97,7 @@ export NVM_DIR="/Users/arygalov/.nvm"
 # GAM Alias
 alias gam="/Users/alexrygalov/bin/gam/gam"
 # vim Alias
-alias vi="/usr/local/bin/vim"
+# alias vi="/usr/local/bin/vim"
 # Docker aliases
 alias doeckr="docker"
 alias docekr="docker"
@@ -109,17 +108,9 @@ alias brewup="brew update && brew upgrade && brew cleanup"
 
 export PATH="/usr/local/bin:/opt/puppetlabs/bin/:/usr/local/sbin:$PATH"
 
-
-alias wttr="curl wttr.in"
-# gma project aliases
-
-alias bsfgam="/Users/ar/GAM/bsf_gam/gam"
-alias seagam="/Users/ar/GAM/sea_gam/gam"
-alias eumegam="/Users/ar/GAM/eume_gam/gam"
-alias amsgam="/Users/ar/GAM/ams_gam/gam"
-
 # fun weather alias:
 alias weather="curl http://wttr.in" 
+
 # Fix ssh agent for macOS 10.12
 # ssh-add -A 2>/dev/null;
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
@@ -138,7 +129,25 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ar/google-cloud-sdk/path.zsh.inc'; fi
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/ar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ar/google-cloud-sdk/completion.zsh.inc'; fi
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
+# Use Neovim as "preferred editor"​
+export VISUAL=nvim
+
+# Use Neovim instead of Vim or Vi​
+alias vim=nvim
+alias vi=nvim
+
+# HSTR configuration - add this to ~/.bashrc
+alias hh=hstr                    # hh to be alias for hstr
+export HISTFILE=~/.zsh_history  # ensure history file visibility
+export HSTR_CONFIG=hicolor        # get more colors
+bindkey -s "\C-r" "\eqhstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc)
+
+export MAESTRO_CLI_HOME=~/maestro-cli
+export PATH=$PATH:$MAESTRO_CLI_HOME/bin
+
+export JAVA_HOME=$(/usr/libexec/java_home)
