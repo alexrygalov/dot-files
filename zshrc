@@ -21,7 +21,7 @@ DISABLE_AUTO_TITLE="true"
 #
 # Example format:
 #   plugins=(rails git textmate ruby)
-plugins=(git rbenv docker)
+plugins=(git rbenv docker kubectl)
 
 source $ZSH/oh-my-zsh.sh
 # source ~/.iterm.zsh
@@ -88,7 +88,6 @@ plugins=(git docker kubectl)
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-
 # NVM
 export NVM_DIR="/Users/arygalov/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -96,8 +95,14 @@ export NVM_DIR="/Users/arygalov/.nvm"
 
 # GAM Alias
 alias gam="/Users/alexrygalov/bin/gam/gam"
+
 # vim Alias
 # alias vi="/usr/local/bin/vim"
+
+# Use Neovim instead of Vim or Vi​
+alias vim=nvim
+alias vi=nvim
+
 # Docker aliases
 alias doeckr="docker"
 alias docekr="docker"
@@ -137,13 +142,9 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 # Use Neovim as "preferred editor"​
 export VISUAL=nvim
 
-# Use Neovim instead of Vim or Vi​
-alias vim=nvim
-alias vi=nvim
-
 # HSTR configuration - add this to ~/.bashrc
-alias hh=hstr                    # hh to be alias for hstr
-export HISTFILE=~/.zsh_history  # ensure history file visibility
+alias hh=hstr                     # hh to be alias for hstr
+export HISTFILE=~/.zsh_history    # ensure history file visibility
 export HSTR_CONFIG=hicolor        # get more colors
 bindkey -s "\C-r" "\eqhstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
