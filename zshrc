@@ -152,3 +152,5 @@ export MAESTRO_CLI_HOME=~/maestro-cli
 export PATH=$PATH:$MAESTRO_CLI_HOME/bin
 
 export JAVA_HOME=$(/usr/libexec/java_home)
+
+export KUBECONFIG=~/kubeconfig/stage-cluster.conf:~/kubeconfig/minikube
