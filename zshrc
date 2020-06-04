@@ -50,7 +50,7 @@ source $ZSH/oh-my-zsh.sh
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Vagrant
-alias -g vg='vagrant'
+alias vg='vagrant'
 
 # Python
 alias python=python3
@@ -58,7 +58,7 @@ alias python=python3
 export PATH=$PATH:~/Library/Python/3.7/bin/
 
 # Terraform
-alias -g tf='terraform'
+alias tf='terraform'
 
 # Homebrew update alias
 alias brewup="brew update && brew upgrade && brew cleanup"
@@ -67,6 +67,6 @@ alias brewup="brew update && brew upgrade && brew cleanup"
 setopt HIST_IGNORE_SPACE
 alias jrnl=" jrnl"
 
-# fun weather alias:
+# fun weather alias
 alias weather="curl http://wttr.in"
 
