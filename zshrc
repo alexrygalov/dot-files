@@ -24,7 +24,15 @@ SAVEHIST=5000000
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker kubectl terraform aws)
+plugins=(
+    git
+    docker
+    kubectl
+    terraform
+    aws
+    poetry
+    terragrunt
+    )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -49,16 +57,19 @@ source $ZSH/oh-my-zsh.sh
 # Java Home
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+function gam() { "/Users/arygalov/bin/gam/gam" "$@" ; }
+
 # Vagrant
 alias vg='vagrant'
 
 # Python
 alias python=python3
 
-export PATH=$PATH:~/Library/Python/3.7/bin/
-
 # Terraform
 alias tf='terraform'
+alias tg='terragrunt'
 
 # Homebrew update alias
 alias brewup="brew update && brew upgrade && brew cleanup"
@@ -70,3 +81,5 @@ alias jrnl=" jrnl"
 # fun weather alias
 alias weather="curl http://wttr.in"
 
+#direnv
+eval "$(direnv hook zsh)"
