@@ -48,7 +48,7 @@ function gam() { "/Users/arygalov/bin/gam/gam" "$@" ; }
 alias vg='vagrant'
 
 # Python
-alias python=python3
+# alias python=python3
 
 # Terraform
 alias tf='terraform'
@@ -67,10 +67,26 @@ alias weather="curl http://wttr.in"
 # direnv
 eval "$(direnv hook zsh)"
 
+# GO
+export GOPATH=$HOME/go
+
 # PATH ~/bin folder
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:$GOPATH/bin:/usr/local/sbin
 
 # spaceship promt
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_PROMPT_PREFIXES_SHOW=false
 SPACESHIP_PROMPT_SEPARATE_LINE=false
+
+## Random quote from fucking-greate-advice
+# /usr/bin/printf "$(echo -e `curl -s http://fucking-great-advice.ru/api/random |
+# awk -F \" '{print $6}'` | sed 's/\&nbsp;/ /g')"\\n
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+export LDFLAGS="-L/usr/local/opt/zlib/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include"
