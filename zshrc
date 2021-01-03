@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/arygalov/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -47,9 +47,6 @@ function gam() { "/Users/arygalov/bin/gam/gam" "$@" ; }
 # Vagrant
 alias vg='vagrant'
 
-# Python
-# alias python=python3
-
 # Terraform
 alias tf='terraform'
 alias tg='terragrunt'
@@ -73,12 +70,12 @@ export GOPATH=$HOME/go
 # PATH ~/bin folder
 export PATH=$PATH:~/bin:$GOPATH/bin:/usr/local/sbin:/usr/local/bin
 
-# spaceship promt
+# spaceship prompt
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_PROMPT_PREFIXES_SHOW=false
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 
-## Random quote from fucking-greate-advice
+## Random quote from fucking-great-advice
 # /usr/bin/printf "$(echo -e `curl -s http://fucking-great-advice.ru/api/random |
 # awk -F \" '{print $6}'` | sed 's/\&nbsp;/ /g')"\\n
 export PYENV_ROOT="$HOME/.pyenv"
