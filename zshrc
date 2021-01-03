@@ -71,7 +71,7 @@ eval "$(direnv hook zsh)"
 export GOPATH=$HOME/go
 
 # PATH ~/bin folder
-export PATH=$PATH:~/bin:$GOPATH/bin:/usr/local/sbin
+export PATH=$PATH:~/bin:$GOPATH/bin:/usr/local/sbin:/usr/local/bin
 
 # spaceship promt
 SPACESHIP_PROMPT_ADD_NEWLINE=false
@@ -90,3 +90,7 @@ fi
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
+
+# Enable auto-activation of virtualenvs
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
